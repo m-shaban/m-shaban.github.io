@@ -31,4 +31,22 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    const affiliationsMarquee = document.querySelector('.affiliations-marquee');
+    const primaryAffiliationsTrack = affiliationsMarquee?.querySelector('.affiliations-track');
+    if (affiliationsMarquee && primaryAffiliationsTrack) {
+        const syncAffiliationsMarqueeWidth = () => {
+            const trackWidth = primaryAffiliationsTrack.getBoundingClientRect().width;
+            affiliationsMarquee.style.setProperty('--affiliations-track-width', `${trackWidth}px`);
+        };
+
+        syncAffiliationsMarqueeWidth();
+        window.addEventListener('resize', syncAffiliationsMarqueeWidth);
+
+        primaryAffiliationsTrack.querySelectorAll('img').forEach((img) => {
+            if (!img.complete) {
+                img.addEventListener('load', syncAffiliationsMarqueeWidth, { once: true });
+            }
+        });
+    }
+
 });
