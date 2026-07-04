@@ -10868,11 +10868,15 @@ p.lead {
 }
 
 .affiliations-banner {
-  position: relative;
+  position: sticky;
+  top: 0.75rem;
   overflow: hidden;
   margin-bottom: 2rem;
   padding: 1rem 0;
+  background-color: #fff;
   border-top: 1px solid rgba(189, 93, 56, 0.25);
+  border-bottom: 1px solid rgba(189, 93, 56, 0.12);
+  z-index: 10;
 }
 
 .affiliations-banner::before,
@@ -10981,6 +10985,12 @@ p.lead {
   }
   .affiliations-marquee {
     animation: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .affiliations-banner {
+    top: 1.5rem;
   }
 }
 
