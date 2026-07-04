@@ -10867,6 +10867,105 @@ p.lead {
   font-size: 1.5rem;
 }
 
+.affiliations-banner {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(189, 93, 56, 0.25);
+  border-bottom: 1px solid rgba(189, 93, 56, 0.25);
+}
+
+.affiliations-banner::before,
+.affiliations-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.affiliations-banner::before {
+  left: 0;
+  background: linear-gradient(90deg, #fff, rgba(255, 255, 255, 0));
+}
+
+.affiliations-banner::after {
+  right: 0;
+  background: linear-gradient(270deg, #fff, rgba(255, 255, 255, 0));
+}
+
+.affiliations-track {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 1.25rem;
+  min-width: max-content;
+  animation: affiliations-marquee 12s linear infinite;
+}
+
+.affiliation-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.5rem;
+  padding: 0.75rem 1.1rem;
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(189, 93, 56, 0.18);
+  border-radius: 999px;
+  box-shadow: 0 10px 25px rgba(33, 37, 41, 0.06);
+  flex: 0 0 auto;
+}
+
+.affiliation-logo {
+  height: 3.5rem;
+  width: auto;
+  max-width: none;
+  margin: 0;
+  object-fit: contain;
+  object-position: center;
+}
+
+.affiliation-logo-with-text {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.affiliation-inline-text {
+  color: #343a40;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+@keyframes affiliations-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 1.25rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .affiliations-banner {
+    overflow-x: auto;
+  }
+  .affiliations-banner::before,
+  .affiliations-banner::after {
+    display: none;
+  }
+  .affiliations-track {
+    animation: none;
+  }
+}
+
 #sideNav {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -10969,4 +11068,8 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+}
+
+.blockquote-footer::before {
+  content: "\2014\00A0";
 }
