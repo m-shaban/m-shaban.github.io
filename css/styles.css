@@ -10867,11 +10867,17 @@ p.lead {
   font-size: 1.5rem;
 }
 
+.page-banner-wrap {
+  max-width: 75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .affiliations-banner {
   position: sticky;
   top: 0.75rem;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   padding: 1rem 0;
   background-color: #fff;
   border-top: 1px solid rgba(189, 93, 56, 0.25);
@@ -10989,6 +10995,10 @@ p.lead {
 }
 
 @media (min-width: 992px) {
+  .page-banner-wrap {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
   .affiliations-banner {
     top: 1.5rem;
   }
