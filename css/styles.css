@@ -10939,7 +10939,6 @@ p.lead {
   height: var(--affiliation-logo-height);
   max-height: var(--affiliation-logo-height);
   width: auto;
-  max-width: 8.5rem;
   margin: 0;
   object-fit: contain;
   object-position: center;
@@ -10970,7 +10969,6 @@ p.lead {
     padding: 0.2rem 0.65rem;
   }
   .affiliation-logo {
-    max-width: 7rem;
   }
   .affiliation-inline-text {
     font-size: 0.8rem;
