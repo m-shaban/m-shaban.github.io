@@ -10869,10 +10869,11 @@ p.lead {
 
 .page-banner-wrap {
   position: sticky;
-  top: 0.75rem;
+  top: 0;
   max-width: 75rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  background-color: #fff;
   z-index: 10;
 }
 
@@ -10997,7 +10998,7 @@ p.lead {
 
 @media (min-width: 992px) {
   .page-banner-wrap {
-    top: 1.5rem;
+    top: 0;
     padding-left: 3rem;
     padding-right: 3rem;
   }
