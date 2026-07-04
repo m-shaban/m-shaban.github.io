@@ -10897,11 +10897,10 @@ p.lead {
 }
 
 .affiliations-marquee {
-  --affiliations-track-width: 0px;
   display: flex;
   width: max-content;
   flex: 0 0 auto;
-  animation: affiliations-marquee 12s linear infinite;
+  animation: affiliations-marquee 18s linear infinite;
   will-change: transform;
 }
 
@@ -10968,7 +10967,7 @@ p.lead {
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-1 * var(--affiliations-track-width)));
+    transform: translateX(-50%);
   }
 }
 
