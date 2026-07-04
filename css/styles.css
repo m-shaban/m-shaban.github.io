@@ -10925,6 +10925,7 @@ p.lead {
 }
 
 .affiliation-item {
+  --affiliation-logo-height: 2.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10934,7 +10935,9 @@ p.lead {
 }
 
 .affiliation-logo {
-  height: clamp(1.9rem, 3vw, 2.6rem);
+  display: block;
+  height: var(--affiliation-logo-height);
+  max-height: var(--affiliation-logo-height);
   width: auto;
   max-width: 8.5rem;
   margin: 0;
@@ -10962,11 +10965,11 @@ p.lead {
     padding-right: 0.85rem;
   }
   .affiliation-item {
+    --affiliation-logo-height: 1.9rem;
     min-height: 3rem;
     padding: 0.2rem 0.65rem;
   }
   .affiliation-logo {
-    height: 2rem;
     max-width: 7rem;
   }
   .affiliation-inline-text {
